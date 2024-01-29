@@ -1,0 +1,13 @@
+@use 'base';
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-padding-top: 10rem;
+}
