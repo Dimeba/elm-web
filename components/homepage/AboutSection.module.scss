@@ -4,9 +4,14 @@
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 4rem;
+	margin-bottom: 2rem;
 
 	> * {
 		grid-column: span 6;
+	}
+
+	h4 {
+		margin-bottom: 1.5rem;
 	}
 }
 
@@ -28,9 +33,16 @@
 
 @media screen and (max-width: 1024px) {
 	.aboutContent {
+		grid-gap: 2rem;
+		margin-bottom: 2.5rem;
+
 		> * {
 			grid-column: span 12;
 			max-width: 80vw;
+		}
+
+		h4 {
+			margin-bottom: 0.5rem;
 		}
 	}
 }

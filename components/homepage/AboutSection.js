@@ -3,6 +3,7 @@ import styles from './AboutSection.module.scss'
 
 // components
 import Image from 'next/image'
+import Button from '../Button'
 
 const AboutSection = () => {
 	return (
@@ -42,6 +43,7 @@ const AboutSection = () => {
 						</div>
 					</div>
 				</div>
+				<Button color='yellow' text='Learn More' icon='/arrow.svg' animate />
 			</div>
 		</section>
 	)
