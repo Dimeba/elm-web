@@ -1,0 +1,39 @@
+@use '@/app/base';
+
+.aboutContent {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 4rem;
+
+	> * {
+		grid-column: span 6;
+	}
+}
+
+.members {
+	display: flex;
+	gap: 2rem;
+}
+
+.memberLogo {
+	height: 4rem;
+	flex-grow: 1;
+	position: relative;
+
+	img {
+		object-fit: contain;
+		object-position: left;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.aboutContent {
+		> * {
+			grid-column: span 12;
+			max-width: 80vw;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+}

@@ -1,7 +1,10 @@
+// components
+import AboutSection from '@/components/homepage/AboutSection'
+
 export default function Home() {
 	return (
 		<main>
-			<div>Dev Test</div>
+			<AboutSection />
 		</main>
 	)
 }
