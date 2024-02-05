@@ -26,6 +26,13 @@ p {
 	margin: 0;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	width: fit-content;
+}
+
 h1 {
 	font-size: 4rem;
 }

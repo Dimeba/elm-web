@@ -1,0 +1,60 @@
+@use '@/app/base';
+
+.slider {
+	overflow: hidden;
+	padding-top: 3rem;
+}
+
+.sliderTitle {
+	margin-bottom: 2rem;
+}
+
+.sliderContent {
+	display: flex;
+	gap: 4rem;
+	flex-wrap: nowrap;
+	width: fit-content;
+	animation-name: slide;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.sliderItem {
+	width: calc(((1440px - (3 * 64px)) / 4));
+	aspect-ratio: 1 / 1;
+	background-color: base.$blue;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sliderItem:hover {
+	background-color: base.$yellow;
+}
+
+.logo {
+	position: relative;
+	width: 80%;
+	height: 50%;
+}
+
+// animation
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-100% + 100vw));
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.sliderContent {
+		gap: 2rem;
+	}
+
+	.sliderItem {
+		width: 40vw;
+	}
+}
