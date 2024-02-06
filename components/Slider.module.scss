@@ -20,7 +20,7 @@
 }
 
 .sliderItem {
-	width: calc(((1440px - (3 * 64px)) / 4));
+	width: calc(((1440px - (3 * 4rem)) / 4));
 	aspect-ratio: 1 / 1;
 	background-color: base.$blue;
 	padding: 2rem;
@@ -46,6 +46,16 @@
 	}
 	100% {
 		transform: translateX(calc(-100% + 100vw));
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.sliderContent {
+		gap: 5vw;
+	}
+
+	.sliderItem {
+		width: calc(((90vw - (3 * 5vw)) / 4));
 	}
 }
 

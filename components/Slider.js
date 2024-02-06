@@ -18,7 +18,7 @@ const Slider = ({ content }) => {
 	return (
 		<div className={styles.slider}>
 			<div className='sectionContainer'>
-				<h4 className={styles.sliderTitle}> Dealership & Partners</h4>
+				<h4 className={styles.sliderTitle}> Dealerships & Partners</h4>
 			</div>
 			<div
 				className={styles.sliderContent}
@@ -39,6 +39,7 @@ const Slider = ({ content }) => {
 								src={'https:' + item.fields.image.fields.file.url}
 								fill
 								alt={`${item.fields.title} logo.`}
+								loading='lazy'
 							/>
 						</div>
 					</Link>
