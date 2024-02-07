@@ -44,6 +44,8 @@ h2 {
 
 h3 {
 	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
 }
 
 h4 {
@@ -57,7 +59,15 @@ h4 {
 }
 
 @media screen and (max-width: 768px) {
+	section {
+		padding: 50px 0;
+	}
+
 	.sectionContainer {
 		max-width: 80vw;
+	}
+
+	h2 {
+		font-size: 2rem;
 	}
 }

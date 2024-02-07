@@ -6,7 +6,7 @@ import styles from './Button.module.scss'
 // components
 import Image from 'next/image'
 
-const Button = ({ text, color, reverse, icon, animate }) => {
+const Button = ({ text, color, reverse, icon, animate, newClass }) => {
 	let buttonColor
 
 	switch (color) {
@@ -29,7 +29,7 @@ const Button = ({ text, color, reverse, icon, animate }) => {
 	}
 
 	return (
-		<div className={styles.button} style={buttonStyles}>
+		<div className={`${styles.button} ${newClass}`} style={buttonStyles}>
 			{text && <p style={{ color: color == 'blue' ? 'white' : '' }}>{text}</p>}
 			{icon && (
 				<Image

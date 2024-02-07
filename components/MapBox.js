@@ -20,6 +20,7 @@ const MapBox = ({ content }) => {
 				mapboxAccessToken={process.env.mapboxToken}
 				scrollZoom={false}
 				attributionControl={false}
+				dragPan={false}
 			>
 				<Marker
 					longitude={content.fields.longitude}

@@ -52,10 +52,20 @@ const Footer = ({ content }) => {
 							<Image src='/logo-white.svg' fill alt='Membership Logo' />
 						</div> */}
 						<div className={styles.logo}>
-							<Image src='/nyc1-white.svg' fill alt='Membership Logo' />
+							<Image
+								src='/nyc1-white.svg'
+								fill
+								alt='Membership Logo'
+								loading='lazy'
+							/>
 						</div>
 						<div className={styles.logo}>
-							<Image src='/nyc2-white.svg' fill alt='Membership Logo' />
+							<Image
+								src='/nyc2-white.svg'
+								fill
+								alt='Membership Logo'
+								loading='lazy'
+							/>
 						</div>
 					</div>
 

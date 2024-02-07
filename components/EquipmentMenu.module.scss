@@ -1,0 +1,57 @@
+@use '@/app/base';
+
+.equipmentMenu {
+	display: flex;
+}
+
+.equipmentGroup {
+	flex: 1 1;
+	padding: 4rem 3rem;
+	border-right: 1px solid base.$gray;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-content: space-between;
+	// cursor: pointer;
+	transition: 0.3s;
+}
+
+.equipmentGroup:last-of-type {
+	border-right: none;
+}
+
+.equipmentButton {
+	padding: 1.2rem !important;
+}
+
+.equipmentGroup:hover {
+	background-color: base.$yellow;
+
+	.equipmentButton {
+		background-color: white !important;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.equipmentMenu {
+		flex-direction: column;
+		max-width: 80vw;
+	}
+
+	.equipmentGroup {
+		border-right: none;
+		border-bottom: 1px solid base.$gray;
+		padding: 3rem 0;
+	}
+
+	.equipmentGroup:first-of-type {
+		padding-top: 0;
+	}
+
+	.equipmentGroup:last-of-type {
+		border-bottom: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+}

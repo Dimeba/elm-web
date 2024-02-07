@@ -25,6 +25,7 @@ const AboutSection = ({ content }) => {
 									src='/nyc1-black.svg'
 									fill
 									alt='member association logo'
+									loading='lazy'
 								/>
 							</div>
 
@@ -33,6 +34,7 @@ const AboutSection = ({ content }) => {
 									src='/nyc2-black.svg'
 									fill
 									alt='member association logo'
+									loading='lazy'
 								/>
 							</div>
 						</div>
