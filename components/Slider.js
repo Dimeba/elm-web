@@ -6,14 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Slider = ({ content }) => {
-	const sliderContent = [
-		...content,
-		...content,
-		...content,
-		...content,
-		...content,
-		...content
-	]
+	const sliderContent = [...content, ...content]
 
 	return (
 		<div className={styles.slider}>
@@ -23,7 +16,7 @@ const Slider = ({ content }) => {
 			<div
 				className={styles.sliderContent}
 				style={{
-					animationDuration: `${content.length * 30}s`
+					animationDuration: `${content.length * 2.5}s`
 				}}
 			>
 				{sliderContent.map((item, index) => (

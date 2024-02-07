@@ -11,7 +11,7 @@
 
 .sliderContent {
 	display: flex;
-	gap: 4rem;
+	// gap: 4rem;
 	flex-wrap: nowrap;
 	width: fit-content;
 	animation-name: slide;
@@ -27,6 +27,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-right: 4rem;
 }
 
 .sliderItem:hover {
@@ -44,26 +45,20 @@
 	0% {
 		transform: translateX(0);
 	}
+
 	100% {
-		transform: translateX(calc(-100% + 100vw));
+		transform: translateX(calc(-50%));
 	}
 }
 
 @media screen and (max-width: 1440px) {
-	.sliderContent {
-		gap: 5vw;
-	}
-
 	.sliderItem {
 		width: calc(((90vw - (3 * 5vw)) / 4));
+		margin-right: 2rem;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.sliderContent {
-		gap: 2rem;
-	}
-
 	.sliderItem {
 		width: 40vw;
 	}
