@@ -44,6 +44,14 @@
 		padding: 3rem 0;
 	}
 
+	.equipmentGroup:hover {
+		background-color: white;
+
+		.equipmentButton {
+			background-color: base.$yellow !important;
+		}
+	}
+
 	.equipmentGroup:first-of-type {
 		padding-top: 0;
 	}

@@ -1,0 +1,113 @@
+@use '@/app/base';
+
+.hero {
+	padding: 0;
+	margin-bottom: 100px;
+	min-height: 100vh;
+	// height: 100vh;
+	background-color: base.$blue;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 4rem;
+}
+
+.heroImage {
+	transition: 1s;
+	object-fit: cover;
+	// object-position: left;
+	// z-index: 1;
+}
+
+.heroContent {
+	position: relative;
+	z-index: 1;
+
+	min-height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	h1 {
+		color: white;
+		text-wrap: balance;
+		max-width: 50%;
+	}
+
+	> p {
+		text-wrap: balance;
+		margin-bottom: 3rem;
+		color: white;
+		max-width: 50%;
+	}
+}
+
+.heroButton:hover {
+	background-color: white !important;
+	border-color: white !important;
+}
+
+.heroTrack {
+	background-color: base.$yellow;
+	padding: 2rem 0;
+	z-index: 1;
+	position: relative;
+}
+
+.trackContent {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	hr {
+		border-color: base.$blue;
+		width: 1rem;
+		transform: rotate(90deg);
+	}
+
+	hr:last-of-type {
+		display: none;
+	}
+}
+
+.brochureButton:hover {
+	gap: 1rem !important;
+	background-color: rgba($color: base.$blue, $alpha: 0.25) !important;
+	border-color: white !important;
+}
+
+@media screen and (max-width: 1024px) {
+	.hero {
+		justify-content: center;
+	}
+
+	.heroImage {
+		opacity: 0.2;
+	}
+
+	.heroContent {
+		h1,
+		> p {
+			max-width: 100%;
+		}
+	}
+
+	.heroTrack {
+		display: none;
+	}
+
+	// .trackContent {
+	// 	h4,
+	// 	hr {
+	// 		display: none;
+	// 	}
+	// }
+}
+
+@media screen and (max-width: 768px) {
+	.hero {
+		margin-bottom: 50px;
+	}
+}
