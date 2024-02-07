@@ -13,10 +13,28 @@ export const metadata = {
 	}
 }
 
-export default function RootLayout({ children }) {
+// contentful
+import { createClient } from 'contentful'
+
+// components
+import Contact from '@/components/Contact'
+
+export default async function RootLayout({ children }) {
+	const client = createClient({
+		space: process.env.space,
+		accessToken: process.env.accessToken
+	})
+
+	const contact = await client.getEntries({
+		content_type: 'contactSection'
+	})
+
 	return (
 		<html lang='en'>
-			<body className={outfit.className}>{children}</body>
+			<body className={outfit.className}>
+				{children}
+				<Contact content={contact.items[0]} />
+			</body>
 		</html>
 	)
 }

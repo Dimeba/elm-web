@@ -1,0 +1,24 @@
+@use '@/app/base';
+
+.contact {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 2rem;
+}
+
+.map {
+	grid-column: span 6;
+	aspect-ratio: 1 / 1;
+}
+
+.form {
+	grid-column: span 6;
+}
+
+@media screen and (max-width: 768px) {
+	.map,
+	.form {
+		grid-column: span 12;
+		max-width: 80vw;
+	}
+}

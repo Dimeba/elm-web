@@ -2,7 +2,8 @@
 const nextConfig = {
 	env: {
 		space: process.env.CONTENTFUL_SPACE_ID,
-		accessToken: process.env.CONTENTFUL_ACCESS_KEY
+		accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+		mapboxToken: process.env.MAPBOX_TOKEN
 	},
 	images: {
 		remotePatterns: [
