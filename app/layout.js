@@ -18,6 +18,7 @@ import { createClient } from 'contentful'
 
 // components
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 
 export default async function RootLayout({ children }) {
 	const client = createClient({
@@ -34,6 +35,7 @@ export default async function RootLayout({ children }) {
 			<body className={outfit.className}>
 				{children}
 				<Contact content={contact.items[0]} />
+				<Footer content={contact.items[0]} />
 			</body>
 		</html>
 	)

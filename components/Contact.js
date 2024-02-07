@@ -7,7 +7,7 @@ import MapBox from './MapBox'
 
 const Contact = ({ content }) => {
 	return (
-		<section>
+		<section id='contact'>
 			<div className={`sectionContainer ${styles.contact}`}>
 				<MapBox content={content} />
 
