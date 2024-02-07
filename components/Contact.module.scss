@@ -3,7 +3,8 @@
 .contact {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 2rem;
+	grid-gap: 4rem;
+	align-items: center;
 }
 
 .map {
@@ -13,12 +14,72 @@
 
 .form {
 	grid-column: span 6;
+
+	form {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 1rem;
+		margin-bottom: 2rem;
+		width: 100%;
+
+		input,
+		textarea {
+			border: 1px solid base.$gray;
+			padding: 1rem 2rem;
+			border-radius: 30px;
+			font-size: 1rem;
+			font-family: inherit;
+			font-weight: inherit;
+			width: 100%;
+		}
+
+		input:focus,
+		textarea:focus {
+			// background-color: base.$gray;
+			outline: 2px solid base.$yellow;
+			border: none;
+		}
+
+		input::placeholder,
+		textarea::placeholder {
+			color: rgba($color: base.$blue, $alpha: 0.5);
+		}
+
+		input {
+			grid-column: span 6;
+		}
+
+		textarea {
+			grid-column: span 12;
+			aspect-ratio: 5 / 1;
+		}
+
+		button {
+			background-color: transparent;
+			border: 0;
+			font-family: inherit;
+			font-size: inherit;
+			grid-column: span 12;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.contact {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.map,
+	.form {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 768px) {
-	.map,
-	.form {
-		grid-column: span 12;
-		max-width: 80vw;
-	}
+	// // .map,
+	// .form {
+	// 	grid-column: span 12;
+	// 	max-width: 80vw;
+	// }
 }
