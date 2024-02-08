@@ -17,6 +17,7 @@ export const metadata = {
 import { createClient } from 'contentful'
 
 // components
+import Header from '@/components/Header'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 
@@ -33,6 +34,7 @@ export default async function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body className={outfit.className}>
+				<Header />
 				{children}
 				<Contact content={contact.items[0]} />
 				<Footer content={contact.items[0]} />

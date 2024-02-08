@@ -1,0 +1,71 @@
+@use '@/app/base';
+
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	background-color: white;
+	padding: 2rem 0;
+	border-bottom: 1px solid base.$gray;
+}
+
+.headerContent {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.navigation {
+	display: flex;
+	gap: 4rem;
+
+	p {
+		position: relative;
+	}
+
+	p:after {
+		content: '';
+		background-color: base.$yellow;
+		position: absolute;
+		width: 0;
+		height: 2px;
+		right: 0;
+		display: block;
+		transition: width 0.2s ease;
+		-webkit-transition: width 0.2s ease;
+	}
+
+	p:hover:after {
+		width: 100%;
+		left: 0;
+	}
+}
+
+.hamburger {
+	display: none;
+	height: 24px;
+	align-items: center;
+	overflow: hidden;
+	transform: translateX(12px);
+}
+
+@media screen and (max-width: 1024px) {
+	.hamburger {
+		display: flex;
+	}
+
+	.hidden {
+		display: none !important;
+	}
+
+	.navigation {
+		width: 100%;
+		padding: 5rem 0 2rem 0;
+		flex-direction: column;
+		gap: 2rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+}
