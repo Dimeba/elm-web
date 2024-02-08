@@ -40,7 +40,7 @@ const AboutSection = ({ content }) => {
 						</div>
 					</div>
 				</div>
-				<Link href='/about'>
+				<Link href='/about' aria-label='Link to About Page'>
 					<Button color='yellow' text='Learn More' icon='/arrow.svg' animate />
 				</Link>
 			</div>

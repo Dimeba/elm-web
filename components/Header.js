@@ -10,10 +10,13 @@ import { Spin as Hamburger } from 'hamburger-react'
 
 // hooks
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+	const pathname = usePathname()
+
 	const menu = [
-		{ text: 'About ELM', url: '/abouot' },
+		{ text: 'About ELM', url: '/about' },
 		{ text: 'Our Services', url: '/services' },
 		{ text: 'Our Equipment', url: '/equipment' },
 		{ text: 'News', url: '/news' }
@@ -24,7 +27,9 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<div className={`sectionContainer ${styles.headerContent}`}>
-				<Image src='/logo.svg' alt='Logo' height={31} width={150} />
+				<Link href='/' aria-label='Link to Homepage'>
+					<Image src='/logo.svg' alt='Logo' height={31} width={150} />
+				</Link>
 
 				<div className={styles.hamburger}>
 					<Hamburger
@@ -47,7 +52,7 @@ const Header = () => {
 						</Link>
 					))}
 
-					<a href='/#contact' onClick={() => setOpenMenu(false)}>
+					<a href={`${pathname}#contact`} onClick={() => setOpenMenu(false)}>
 						<p>Contact</p>
 					</a>
 				</nav>

@@ -5,7 +5,6 @@ import styles from './Hero.module.scss'
 
 // components
 import Image from 'next/image'
-import Link from 'next/link'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Button from '../Button'
 
@@ -48,7 +47,7 @@ const Hero = ({ content }) => {
 						</React.Fragment>
 					))}
 
-					<Link
+					<a
 						href={'https:' + content.fields.brochure.fields.file.url}
 						target='_blank'
 					>
@@ -59,7 +58,7 @@ const Hero = ({ content }) => {
 							reverse
 							newClass={styles.brochureButton}
 						/>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</section>
