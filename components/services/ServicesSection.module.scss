@@ -1,0 +1,52 @@
+@use '@/app/base';
+
+.servicesSection {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 4rem;
+}
+
+.description {
+	grid-column: span 4;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.services {
+	grid-column: span 8;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4rem;
+}
+
+.service {
+	grid-column: span 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+
+	h4 {
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid base.$gray;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.description,
+	.services {
+		grid-column: span 12;
+		max-width: 80vw;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.service,
+	.description {
+		max-width: 80vw;
+	}
+
+	.service {
+		grid-column: span 2;
+	}
+}

@@ -83,4 +83,16 @@
 	// 	grid-column: span 12;
 	// 	max-width: 80vw;
 	// }
+
+	.form {
+		form {
+			input {
+				grid-column: span 12;
+			}
+
+			textarea {
+				aspect-ratio: 2 / 1;
+			}
+		}
+	}
 }
