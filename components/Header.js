@@ -19,13 +19,12 @@ const Header = () => {
 		{ text: 'News', url: '/news' }
 	]
 
-	const [hoveredItem, setHoveredItem] = useState(null)
 	const [openMenu, setOpenMenu] = useState(false)
 
 	return (
 		<header className={styles.header}>
 			<div className={`sectionContainer ${styles.headerContent}`}>
-				<Image src='/logo.svg' alt='Logo' height={41} width={194} />
+				<Image src='/logo.svg' alt='Logo' height={31} width={150} />
 
 				<div className={styles.hamburger}>
 					<Hamburger
