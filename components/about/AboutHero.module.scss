@@ -1,0 +1,87 @@
+@use '@/app/base';
+
+.hero {
+	height: 100vh;
+	min-height: fit-content;
+	padding: 96px 0 0 0;
+	// margin-bottom: 100px;
+	background-color: white;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.heroImage {
+	transition: 1s;
+	object-fit: cover;
+	// object-position: left;
+	// z-index: 1;
+}
+
+.heroContent {
+	position: relative;
+	z-index: 1;
+
+	min-height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	> p {
+		text-wrap: balance;
+		margin-bottom: 3rem;
+		max-width: 50%;
+	}
+
+	h4 {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.members {
+	display: flex;
+	gap: 2rem;
+	max-width: 50%;
+}
+
+.memberLogo {
+	height: 4rem;
+	flex-grow: 1;
+	position: relative;
+
+	img {
+		object-fit: contain;
+		object-position: left;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.hero {
+		justify-content: center;
+	}
+
+	.heroImage {
+		opacity: 0.2;
+	}
+
+	.heroContent {
+		h2,
+		h4,
+		> p {
+			max-width: 100%;
+		}
+	}
+
+	.members {
+		display: flex;
+		gap: 2rem;
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hero {
+		margin-bottom: 50px;
+	}
+}

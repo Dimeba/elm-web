@@ -32,7 +32,7 @@ const Slider = ({ content }) => {
 								src={'https:' + item.fields.image.fields.file.url}
 								fill
 								alt={`${item.fields.title} logo.`}
-								// loading='lazy'
+								loading='lazy'
 							/>
 						</div>
 					</Link>

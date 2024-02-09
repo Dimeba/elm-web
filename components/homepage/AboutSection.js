@@ -11,7 +11,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 const AboutSection = ({ content }) => {
 	return (
 		<section>
-			<div className='sectionContainer'>
+			<div className='sectionContainer' style={{ marginBottom: '3rem' }}>
 				<h2>{content.fields.title}</h2>
 				<div className={styles.aboutContent}>
 					{documentToReactComponents(content.fields.homepageDescription)}
