@@ -32,6 +32,14 @@
 	}
 }
 
+.selected {
+	background-color: base.$yellow;
+
+	.equipmentButton {
+		background-color: white !important;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.equipmentMenu {
 		flex-direction: column;

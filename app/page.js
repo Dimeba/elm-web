@@ -28,7 +28,8 @@ export default async function Home() {
 		<main>
 			<Hero content={hero.items[0]} />
 			<AboutSection content={about.items[0]} />
-			<EquipmentMenu content={equipment.items[0]} />
+
+			<EquipmentMenu content={equipment.items[0]} linkToPage={true} />
 		</main>
 	)
 }

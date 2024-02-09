@@ -13,6 +13,9 @@ export const metadata = {
 	}
 }
 
+// context
+import { EquipmentContextProvider } from '@/context/EquipmentContext'
+
 // contentful
 import { createClient } from 'contentful'
 
@@ -33,12 +36,14 @@ export default async function RootLayout({ children }) {
 
 	return (
 		<html lang='en'>
-			<body className={outfit.className}>
-				<Header />
-				{children}
-				<Contact content={contact.items[0]} />
-				<Footer content={contact.items[0]} />
-			</body>
+			<EquipmentContextProvider>
+				<body className={outfit.className}>
+					<Header />
+					{children}
+					<Contact content={contact.items[0]} />
+					<Footer content={contact.items[0]} />
+				</body>
+			</EquipmentContextProvider>
 		</html>
 	)
 }
