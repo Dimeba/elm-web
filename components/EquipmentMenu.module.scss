@@ -67,6 +67,14 @@
 	.equipmentGroup:last-of-type {
 		border-bottom: none;
 	}
+
+	.selected {
+		background-color: inherit;
+
+		.equipmentButton {
+			background-color: inherit;
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {
