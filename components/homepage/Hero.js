@@ -1,5 +1,3 @@
-import React from 'react'
-
 // styles
 import styles from './Hero.module.scss'
 
@@ -7,6 +5,7 @@ import styles from './Hero.module.scss'
 import Image from 'next/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Button from '../Button'
+import HeroTrack from './HeroTrack'
 
 const Hero = ({ content }) => {
 	return (
@@ -38,29 +37,7 @@ const Hero = ({ content }) => {
 				</a>
 			</div>
 
-			<div className={styles.heroTrack}>
-				<div className={`sectionContainer ${styles.trackContent}`}>
-					{content.fields.services.map(service => (
-						<React.Fragment key={service.sys.id}>
-							<h4>{service.fields.title}</h4>
-							<hr />
-						</React.Fragment>
-					))}
-
-					<a
-						href={'https:' + content.fields.brochure.fields.file.url}
-						target='_blank'
-					>
-						<Button
-							color='blue'
-							text='Our Brochure'
-							icon='/download.svg'
-							reverse
-							newClass={styles.brochureButton}
-						/>
-					</a>
-				</div>
-			</div>
+			<HeroTrack content={content} />
 		</section>
 	)
 }

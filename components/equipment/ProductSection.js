@@ -5,6 +5,7 @@ import styles from './ProductSection.module.scss'
 
 // components
 import Image from 'next/image'
+import Button from '../Button'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 // hooks
@@ -12,6 +13,7 @@ import { useState } from 'react'
 
 const ProductSection = ({ content }) => {
 	const [showInfo, setShowInfo] = useState(true)
+	const [blueButtonIcon, setBlueButtonIcon] = useState('/download.svg')
 
 	return (
 		<section className={styles.productSection}>
@@ -20,12 +22,44 @@ const ProductSection = ({ content }) => {
 				<h3>{content.fields.subtitle}</h3>
 
 				<div className={styles.content}>
-					<div className={styles.image}>
-						<Image
-							src={'https:' + content.fields.image.fields.file.url}
-							fill
-							alt='Product Image'
-						/>
+					<div className={styles.imageColumn}>
+						<div className={styles.image}>
+							<Image
+								src={'https:' + content.fields.image.fields.file.url}
+								fill
+								alt='Product Image'
+							/>
+						</div>
+
+						<div className={styles.buttons}>
+							<a
+								href={'https:' + content.fields.brochure.fields.file.url}
+								target='_blank'
+							>
+								<Button
+									color='yellow'
+									icon='/download-black.svg'
+									reverse
+									text='Brochure'
+									newClass={styles.productButton}
+								></Button>
+							</a>
+
+							<a
+								href={'https:' + content.fields.manual.fields.file.url}
+								target='_blank'
+								onMouseEnter={() => setBlueButtonIcon('/download-black.svg')}
+								onMouseLeave={() => setBlueButtonIcon('/download.svg')}
+							>
+								<Button
+									color='blue'
+									icon={blueButtonIcon}
+									reverse
+									text='Manual'
+									newClass={`${styles.productButton} ${styles.blueButton}`}
+								></Button>
+							</a>
+						</div>
 					</div>
 
 					<div className={styles.info}>

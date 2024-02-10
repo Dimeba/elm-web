@@ -11,8 +11,14 @@
 	margin-top: 2rem;
 }
 
-.image {
+.imageColumn {
 	grid-column: span 4;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+.image {
 	position: relative;
 	width: 100%;
 	aspect-ratio: 1 / 1;
@@ -70,15 +76,35 @@
 	}
 }
 
+.buttons {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.productButton:hover {
+	gap: 1rem !important;
+}
+
+.blueButton:hover {
+	p {
+		color: base.$blue !important;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	.content {
 		gap: 2rem;
 	}
 
-	.image,
+	.imageColumn,
 	.info {
 		grid-column: span 6;
 		max-width: 80vw;
+	}
+
+	.imageColumn {
+		gap: 2rem;
 	}
 
 	.tabs,
@@ -93,7 +119,7 @@
 }
 
 @media screen and (max-width: 768px) {
-	.image,
+	.imageColumn,
 	.info {
 		grid-column: span 12;
 	}

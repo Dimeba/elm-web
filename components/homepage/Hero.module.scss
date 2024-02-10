@@ -74,8 +74,9 @@
 
 .brochureButton:hover {
 	gap: 1rem !important;
-	background-color: rgba($color: base.$blue, $alpha: 0.25) !important;
-	border-color: white !important;
+	p {
+		color: base.$blue !important;
+	}
 }
 
 @media screen and (max-width: 1024px) {
