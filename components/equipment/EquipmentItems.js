@@ -36,7 +36,16 @@ const EquipmentItems = ({ items }) => {
 										/>
 									</div>
 
-									<Link href='/' aria-label='Link to Product page.'>
+									<Link
+										href={
+											'/equipment/' +
+											item.fields.title
+												.toLowerCase()
+												.replace(/[^a-z0-9\s-]/g, '')
+												.replace(/\s+/g, '-')
+										}
+										aria-label='Link to Product page.'
+									>
 										<Button text={item.fields.title} icon='/arrow-white.svg' />
 									</Link>
 								</div>
