@@ -23,7 +23,7 @@ const AboutHero = ({ content }) => {
 
 				{documentToReactComponents(content.fields.homepageDescription)}
 
-				<h4>Proud members of</h4>
+				<h4>Our Certifications</h4>
 				<div className={styles.members}>
 					<div className={styles.memberLogo}>
 						<Image
@@ -42,6 +42,21 @@ const AboutHero = ({ content }) => {
 							loading='lazy'
 						/>
 					</div>
+				</div>
+
+				<h4 style={{ marginTop: '4rem' }}>Proud Members of</h4>
+				<div className={styles.members}>
+					{content.fields.members.map(member => (
+						<div className={styles.memberLogo}>
+							<Image
+								key={member.sys.id}
+								src={'https:' + member.fields.image.fields.file.url}
+								fill
+								alt='member association logo'
+								loading='lazy'
+							/>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>

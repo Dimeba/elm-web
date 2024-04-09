@@ -17,7 +17,7 @@ const AboutSection = ({ content }) => {
 					{documentToReactComponents(content.fields.homepageDescription)}
 
 					<div>
-						<h4>Proud members of</h4>
+						<h4>Our Certifications</h4>
 
 						<div className={styles.members}>
 							<div className={styles.memberLogo}>
