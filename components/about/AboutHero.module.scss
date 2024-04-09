@@ -41,13 +41,14 @@
 
 .members {
 	display: flex;
-	gap: 2rem;
+	gap: 4rem;
 	max-width: 50%;
 }
 
 .memberLogo {
-	height: 2rem;
+	height: 3rem;
 	flex-grow: 1;
+	flex-wrap: wrap;
 	position: relative;
 
 	img {
