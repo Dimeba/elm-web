@@ -28,7 +28,8 @@ const AboutHero = ({ content }) => {
 					<div className={styles.memberLogo}>
 						<Image
 							src='/nyc1-black.svg'
-							fill
+							height={48}
+							width={48 * 4.2}
 							alt='member association logo'
 							loading='lazy'
 						/>
@@ -37,7 +38,8 @@ const AboutHero = ({ content }) => {
 					<div className={styles.memberLogo}>
 						<Image
 							src='/nyc2-black.svg'
-							fill
+							height={48}
+							width={48 * 4.7}
 							alt='member association logo'
 							loading='lazy'
 						/>
@@ -47,11 +49,15 @@ const AboutHero = ({ content }) => {
 				<h4 style={{ marginTop: '4rem' }}>Proud Members of</h4>
 				<div className={styles.members}>
 					{content.fields.members.map(member => (
-						<div className={styles.memberLogo}>
+						<div key={member.sys.id} className={styles.memberLogo}>
 							<Image
-								key={member.sys.id}
 								src={'https:' + member.fields.image.fields.file.url}
-								fill
+								height={48}
+								width={
+									48 *
+									(member.fields.image.fields.file.details.image.width /
+										member.fields.image.fields.file.details.image.height)
+								}
 								alt='member association logo'
 								loading='lazy'
 							/>
