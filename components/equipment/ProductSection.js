@@ -32,33 +32,37 @@ const ProductSection = ({ content }) => {
 						</div>
 
 						<div className={styles.buttons}>
-							<a
-								href={'https:' + content.fields.brochure.fields.file.url}
-								target='_blank'
-							>
-								<Button
-									color='yellow'
-									icon='/download-black.svg'
-									reverse
-									text='Brochure'
-									newClass={styles.productButton}
-								></Button>
-							</a>
+							{content.fields.brochure && (
+								<a
+									href={'https:' + content.fields.brochure.fields.file.url}
+									target='_blank'
+								>
+									<Button
+										color='yellow'
+										icon='/download-black.svg'
+										reverse
+										text='Brochure'
+										newClass={styles.productButton}
+									></Button>
+								</a>
+							)}
 
-							<a
-								href={'https:' + content.fields.manual.fields.file.url}
-								target='_blank'
-								onMouseEnter={() => setBlueButtonIcon('/download-black.svg')}
-								onMouseLeave={() => setBlueButtonIcon('/download.svg')}
-							>
-								<Button
-									color='blue'
-									icon={blueButtonIcon}
-									reverse
-									text='Manual'
-									newClass={`${styles.productButton} ${styles.blueButton}`}
-								></Button>
-							</a>
+							{content.fields.manual && (
+								<a
+									href={'https:' + content.fields.manual.fields.file.url}
+									target='_blank'
+									onMouseEnter={() => setBlueButtonIcon('/download-black.svg')}
+									onMouseLeave={() => setBlueButtonIcon('/download.svg')}
+								>
+									<Button
+										color='blue'
+										icon={blueButtonIcon}
+										reverse
+										text='Manual'
+										newClass={`${styles.productButton} ${styles.blueButton}`}
+									></Button>
+								</a>
+							)}
 						</div>
 					</div>
 

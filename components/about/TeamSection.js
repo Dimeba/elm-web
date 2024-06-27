@@ -24,7 +24,7 @@ const TeamSection = ({ content }) => {
 							<div className={styles.info}>
 								<h4>{item.fields.name}</h4>
 								<p className={styles.title}>{item.fields.title}</p>
-								<p>{item.fields.phone}</p>
+								{item.fields.phone && <p>{item.fields.phone}</p>}
 								<p>{item.fields.email}</p>
 							</div>
 						</div>
