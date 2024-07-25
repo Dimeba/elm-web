@@ -1,5 +1,6 @@
 import { Outfit } from 'next/font/google'
 import './globals.scss'
+import Script from 'next/script'
 
 const outfit = Outfit({ subsets: ['latin'] })
 
@@ -36,6 +37,15 @@ export default async function RootLayout({ children }) {
 
 	return (
 		<html lang='en'>
+			<head>
+				<Script
+					type='text/javascript'
+					id='hs-script-loader'
+					async
+					defer
+					src='//js.hs-scripts.com/46387394.js'
+				/>
+			</head>
 			<EquipmentContextProvider>
 				<body className={outfit.className}>
 					<Header />
