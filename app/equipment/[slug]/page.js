@@ -1,3 +1,5 @@
+export const dynamic = 'force-static'
+
 // components
 import ProductSection from '@/components/equipment/ProductSection'
 
