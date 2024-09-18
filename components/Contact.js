@@ -1,6 +1,7 @@
+// styles
 import styles from './Contact.module.scss'
 
-// Components
+// components
 import Button from './Button'
 import MapBox from './MapBox'
 
@@ -16,17 +17,11 @@ const Contact = ({ content }) => {
 					<form
 						name='contact'
 						method='POST'
-						netlify
 						netlify-honeypot='bot-field'
-						action='/success'
+						data-netlify='true'
+						// action='/success'
 					>
-						{/* Netlify form hidden inputs */}
 						<input type='hidden' name='form-name' value='contact' />
-						<p style={{ display: 'none' }}>
-							<label>
-								Don't fill this out if you're human: <input name='bot-field' />
-							</label>
-						</p>
 
 						<input
 							type='text'
@@ -42,7 +37,7 @@ const Contact = ({ content }) => {
 							placeholder='Contact'
 						/>
 
-						<textarea id='message' name='message' placeholder='Message...' />
+						<textarea id='message' name='message' placeholder='Message..' />
 
 						<button type='submit'>
 							<Button color='yellow' text='Send' icon='/arrow.svg' animate />
