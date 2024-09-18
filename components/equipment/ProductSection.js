@@ -63,43 +63,46 @@ const ProductSection = ({ content }) => {
 									></Button>
 								</a>
 							)}
+
+							{content.fields.specification && (
+								<a
+									href={'https:' + content.fields.specification.fields.file.url}
+									target='_blank'
+									onMouseEnter={() => setBlueButtonIcon('/download-black.svg')}
+									onMouseLeave={() => setBlueButtonIcon('/download.svg')}
+								>
+									<Button
+										color='blue'
+										icon={blueButtonIcon}
+										reverse
+										text='Manual'
+										newClass={`${styles.productButton} ${styles.blueButton}`}
+									></Button>
+								</a>
+							)}
 						</div>
 					</div>
 
 					<div className={styles.info}>
 						<div className={styles.tabs}>
 							<h4
-								onClick={() => setShowInfo(true)}
-								style={{ backgroundColor: showInfo ? '#d3d4d9' : '' }}
+							// onClick={() => setShowInfo(true)}
+							// style={{ backgroundColor: showInfo ? '#d3d4d9' : '' }}
 							>
 								Product Information
 							</h4>
-							<h4
+							{/* <h4
 								onClick={() => setShowInfo(false)}
 								style={{ backgroundColor: !showInfo ? '#d3d4d9' : '' }}
 							>
 								Electrical Specification
-							</h4>
+							</h4> */}
 						</div>
 
-						{showInfo ? (
-							<div className={styles.description}>
-								<div>
-									{documentToReactComponents(content.fields.description)}
-								</div>
-								<div>
-									{documentToReactComponents(content.fields.highlights)}
-								</div>
-							</div>
-						) : (
-							<div className={styles.specification}>
-								<Image
-									src={'https:' + content.fields.specification.fields.file.url}
-									fill
-									alt='Specification'
-								/>
-							</div>
-						)}
+						<div className={styles.description}>
+							<div>{documentToReactComponents(content.fields.description)}</div>
+							{/* <div>{documentToReactComponents(content.fields.highlights)}</div> */}
+						</div>
 					</div>
 				</div>
 			</div>

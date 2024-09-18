@@ -24,20 +24,22 @@ const HeroTrack = ({ content }) => {
 					</React.Fragment>
 				))}
 
-				<a
-					href={'https:' + content.fields.brochure.fields.file.url}
-					target='_blank'
-					onMouseEnter={() => setBlueButtonIcon('/download-black.svg')}
-					onMouseLeave={() => setBlueButtonIcon('/download.svg')}
-				>
-					<Button
-						color='blue'
-						text='Our Brochure'
-						icon={blueButtonIcon}
-						reverse
-						newClass={styles.brochureButton}
-					/>
-				</a>
+				{content.fields.brochure && (
+					<a
+						href={'https:' + content.fields.brochure.fields.file.url}
+						target='_blank'
+						onMouseEnter={() => setBlueButtonIcon('/download-black.svg')}
+						onMouseLeave={() => setBlueButtonIcon('/download.svg')}
+					>
+						<Button
+							color='blue'
+							text='Our Brochure'
+							icon={blueButtonIcon}
+							reverse
+							newClass={styles.brochureButton}
+						/>
+					</a>
+				)}
 			</div>
 		</div>
 	)

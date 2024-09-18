@@ -39,14 +39,14 @@
 	margin-bottom: 2rem;
 
 	h4 {
-		padding: 1rem 2rem;
+		padding: 1rem 0;
 		flex: 1 1;
-		cursor: pointer;
+		// cursor: pointer;
 	}
 
-	h4:hover {
-		background-color: rgba($color: base.$gray, $alpha: 0.5);
-	}
+	// h4:hover {
+	// 	background-color: rgba($color: base.$gray, $alpha: 0.5);
+	// }
 }
 
 .specification {

@@ -15,17 +15,19 @@ const ServicesSection = ({ content }) => {
 					<div className={styles.description}>
 						{documentToReactComponents(content.fields.description)}
 
-						<a
-							href={'https:' + content.fields.brochure.fields.file.url}
-							target='_blank'
-						>
-							<Button
-								text='Our Brochure'
-								color='yellow'
-								reverse
-								icon='/download-black.svg'
-							/>
-						</a>
+						{content.fields.brochure && (
+							<a
+								href={'https:' + content.fields.brochure.fields.file.url}
+								target='_blank'
+							>
+								<Button
+									text='Our Brochure'
+									color='yellow'
+									reverse
+									icon='/download-black.svg'
+								/>
+							</a>
+						)}
 					</div>
 
 					<div className={styles.services}>
