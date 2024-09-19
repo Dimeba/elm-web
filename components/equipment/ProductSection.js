@@ -75,7 +75,7 @@ const ProductSection = ({ content }) => {
 										color='blue'
 										icon={blueButtonIcon}
 										reverse
-										text='Manual'
+										text='Specification'
 										newClass={`${styles.productButton} ${styles.blueButton}`}
 									></Button>
 								</a>
