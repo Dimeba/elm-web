@@ -21,9 +21,9 @@ const Footer = ({ content }) => {
 					<Link href='/equipment' aria-label='Our Equipment Page'>
 						<p>Our Equipment </p>
 					</Link>
-					<Link href='/news' aria-label='News Page'>
+					{/* <Link href='/news' aria-label='News Page'>
 						<p>News</p>
-					</Link>
+					</Link> */}
 				</div>
 
 				<div className={styles.column}>

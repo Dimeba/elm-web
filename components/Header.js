@@ -18,8 +18,8 @@ const Header = () => {
 	const menu = [
 		{ text: 'About ELM', url: '/about' },
 		{ text: 'Our Services', url: '/services' },
-		{ text: 'Our Equipment', url: '/equipment' },
-		{ text: 'News', url: '/news' }
+		{ text: 'Our Equipment', url: '/equipment' }
+		// { text: 'News', url: '/news' }
 	]
 
 	const [openMenu, setOpenMenu] = useState(false)

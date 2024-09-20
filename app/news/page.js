@@ -7,7 +7,12 @@ import { createClient } from 'contentful'
 import PagesHero from '@/components/PagesHero'
 import NewsSection from '@/components/news/NewsSection'
 
+// hooks
+import { redirect } from 'next/navigation'
+
 export default async function News() {
+	redirect('/') // Redirect to the homepage
+
 	const client = createClient({
 		space: process.env.space,
 		accessToken: process.env.accessToken
