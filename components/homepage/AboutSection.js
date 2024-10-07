@@ -14,7 +14,9 @@ const AboutSection = ({ content }) => {
 			<div className='sectionContainer' style={{ marginBottom: '3rem' }}>
 				<h2>{content.fields.title}</h2>
 				<div className={styles.aboutContent}>
-					{documentToReactComponents(content.fields.homepageDescription)}
+					<div className={styles.description}>
+						{documentToReactComponents(content.fields.homepageDescription)}
+					</div>
 
 					<div>
 						<h4>Our Certifications</h4>
