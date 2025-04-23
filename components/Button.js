@@ -8,6 +8,7 @@ import Image from 'next/image'
 
 const Button = ({
 	text,
+	smallText,
 	color,
 	reverse,
 	icon,
@@ -42,7 +43,16 @@ const Button = ({
 			style={{ ...buttonStyles, padding: color ? buttonStyles.padding : '0' }}
 			onClick={handleClick}
 		>
-			{text && <p style={{ color: color == 'blue' ? 'white' : '' }}>{text}</p>}
+			{text && (
+				<p
+					style={{
+						color: color == 'blue' ? 'white' : '',
+						fontSize: smallText ? '0.8rem' : ''
+					}}
+				>
+					{text}
+				</p>
+			)}
 			{icon && (
 				<Image
 					src={icon}
